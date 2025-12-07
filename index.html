@@ -355,29 +355,6 @@
   <footer>
     <p>© 2025 Rukmini Trends. All rights reserved.</p>
   </footer>
-   <!-- ⭐ ZOOM POPUP HTML ⭐ -->
-  <div class="zoom-popup" id="zoomPopup">
-    <span class="close-zoom" onclick="closeZoom()">×</span>
-    <img id="zoomImage" src="" />
-  </div>
-  <!-- WhatsApp + Zoom Script -->
-  <script>
-    /* ⭐ ZOOM SCRIPT ⭐ */
-    function zoomImage(img) {
-      document.getElementById("zoomImage").src = img.src;
-      document.getElementById("zoomPopup").style.display = "flex";
-    }
-
-    function closeZoom() {
-      document.getElementById("zoomPopup").style.display = "none";
-    }
-
-    // Add zoom click to all product images
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll(".product img").forEach(img => {
-        img.addEventListener("click", () => zoomImage(img));
-      });
-    });
   <!-- WhatsApp Script -->
   <script>
     function selectSize(button, productName, size) {
