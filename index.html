@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rukmini Trends - Boutique</title>
-  <link rel="stylesheet" href="style.css" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: #fff0f7;
     }
+
+    /* HEADER */
     header {
       display: flex;
       align-items: center;
@@ -19,49 +22,54 @@
       color: white;
     }
     header img.logo {
-      height: 50px;
+      height: 55px;
+      border-radius: 6px;
       margin-right: 15px;
     }
+
+    h1 { margin: 0; font-size: 26px; }
+
+    /* PRODUCTS SECTION */
     .products {
       padding: 20px;
+      text-align: center;
     }
+
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
-    }
-    .product {
-      border: 1px solid #ccc;
       padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
     .product img {
       width: 100%;
-      max-height: 250px;
-      object-fit: cover;
+      border-radius: 8px;
       cursor: pointer;
-      border-radius: 6px;
-      transition: transform 0.2s ease;
+      transition: 0.2s ease;
     }
-    .product img:hover {
-      transform: scale(1.05);
-    }
-    .size-options {
-      margin: 10px 0;
-    }
+    .product img:hover { transform: scale(1.05); }
+
+    .size-options { margin-top: 10px; }
+
     .size-btn {
       border: 1px solid #ff1493;
       color: #ff1493;
-      background: #fff;
+      background: white;
+      padding: 5px 12px;
+      margin: 4px;
       border-radius: 6px;
-      padding: 5px 10px;
-      margin: 5px;
       cursor: pointer;
       font-weight: bold;
-      transition: all 0.2s ease;
+      transition: 0.2s;
     }
     .size-btn:hover, .size-btn.selected {
       background: #ff1493;
@@ -70,27 +78,30 @@
     .size-btn.disabled {
       border-color: #ccc;
       color: #aaa;
-      cursor: not-allowed;
       background: #f4f4f4;
+      cursor: not-allowed;
     }
+
     .buy {
       display: inline-block;
       margin-top: 10px;
       padding: 8px 15px;
       background: #ff1493;
       color: white;
-      text-decoration: none;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
     }
+
     footer {
-      text-align: center;
-      padding: 15px;
       background: #ff1493;
       color: white;
+      padding: 12px;
+      text-align: center;
+      margin-top: 20px;
     }
 
-    /* Zoom CSS */
+    /* ZOOM POPUP */
     .zoom-popup {
       display: none;
       position: fixed;
@@ -113,17 +124,17 @@
       top: 20px;
       right: 30px;
       font-size: 40px;
+      font-weight: bold;
       color: white;
       cursor: pointer;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- HEADER -->
   <header>
-    <img src="logo.webp" alt="Rukmini Trends Logo" class="logo" />
+    <img src="logo.webp" class="logo" alt="Rukmini Trends Logo">
     <h1>Rukmini Trends</h1>
   </header>
 
